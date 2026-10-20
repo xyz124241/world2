@@ -1,0 +1,27 @@
+name: NeptunWorlds
+version: 1.0.0
+main: de.neptun.worlds.WorldsPlugin
+api-version: '1.21'
+author: Neptun
+description: Per-world chat, spawn, OP, gamemode and blocked commands
+softdepend: [Multiverse-Core, PlaceholderAPI, PlayerPoints]
+commands:
+  spawn:
+    description: Teleport to the spawn of your current world
+    usage: /spawn
+  lobby:
+    description: Go to the lobby
+  smp:
+    description: Go to the SMP
+  pvp:
+    description: Go to the PvP world
+  setspawn:
+    description: Set the spawn of the world you are in
+    permission: neptunworlds.admin
+permissions:
+  neptunworlds.admin:
+    description: Use /setspawn
+    default: op
+  neptunworlds.bypass:
+    description: Ignore blocked commands
+    default: false

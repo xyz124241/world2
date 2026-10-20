@@ -1,0 +1,71 @@
+# World every player is sent to when joining
+join-world: lobby
+
+# Players teleported to the spawn of these worlds (menu, portal, /mvtp) land at their last position instead
+restore-last-location:
+  - world
+
+# Each world has its own chat
+world-chat: true
+
+# Default gamemode per world. After that every player's gamemode is remembered per world.
+gamemode:
+  lobby: ADVENTURE
+  world: SURVIVAL
+  pvp: SURVIVAL
+
+# Operator status is remembered per world, like the gamemode: /op someone while he is in a world and he is OP
+# only there. /deop him there to take it away again. The names below are OP in that world by default
+# (until someone is deopped there). Everybody else starts without OP. Names are not case sensitive.
+world-ops:
+  lobby:
+    - WhyNeptun
+  world:
+    - WhyNeptun
+  pvp:
+    - WhyNeptun
+
+# Commands that cannot be used in a world (without the slash). Add aliases too.
+# Players with the permission neptunworlds.bypass are not blocked.
+blocked-commands:
+  pvp:
+    - shop
+    - sell
+    - tagshop
+    - bal
+    - balance
+    - money
+    - pay
+    - points
+    - neptuns
+    - eco
+    - clan
+    - c
+  lobby:
+    - duel
+    - shop
+    - sell
+    - tagshop
+    - bal
+    - balance
+    - money
+    - pay
+    - points
+    - neptuns
+    - clan
+  world:
+    - duel
+
+# Neptuns (PlayerPoints) are kept separately for every world.
+# Needs PlayerPoints and PlaceholderAPI. Money is separated with Multiverse-Inventories (see guide).
+separate-neptuns: true
+
+# World names behind /lobby, /smp, /pvp and the /worlds menu
+travel:
+  lobby: lobby
+  smp: world
+  pvp: pvp
+
+# In these worlds nobody takes damage; falling into the void brings you back to the spawn.
+safe-worlds:
+  - lobby
